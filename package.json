@@ -6,31 +6,18 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    
     "server": "nodemon run server.js",
     "client": "npm start --prefix client",
-   
-    "app": "concurrently \" npm run client \" \" npm run server\""
- ,"heroku-postbuild":"NPM_CONFIG_PRODUDUCTION=false npm install --prefix client && npm run build --prefix client"
+    "app": "concurrently \" npm run client \" \" npm run server\"",
+    "heroku-postbuild": " npm install --prefix client && npm run build --prefix client"
   },
-  "engines":{
-    "node":"16.10.0",
-    "npm":"8.7.0"
-
-
-
+  "engines": {
+    "node": "16.10.0",
+    "npm": "8.7.0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/pickers": "^3.3.10",
-    "@mui/material": "^5.5.3",
-    "accesscontrol": "^2.2.1",
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
@@ -55,12 +42,6 @@
     "nodemailer": "^6.7.4",
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
-    "react-bootstrap": "^2.2.2",
-    "react-cookie": "^4.1.1",
-    "react-cookies": "^0.1.1",
-    "react-date-picker": "^8.4.0",
-    "react-datepicker": "^4.7.0",
-    "react-toastify": "^8.2.0",
     "stripe": "^9.5.0"
   }
 }
